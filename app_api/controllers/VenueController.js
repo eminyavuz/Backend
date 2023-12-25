@@ -59,7 +59,7 @@ const listVenues= async function(req,res){
 
 };
 const addVenue=function(req,res){
-    createResponse(res,200,{"status":"Başarılı"});
+    createResponse(res,201,{"status":"Yeni mekan eklendi"});
 }
 const getVenue= async function(req,res){
     try{
@@ -75,7 +75,7 @@ const getVenue= async function(req,res){
     }
 };
 const updateVenue=function(req,res){
-    createResponse(res,200,{"status":"Başarılı"});
+    createResponse(res,200,{"status":"Mekan güncellendi"});
 }
 const deleteVenue= async function(req,res){
     try{

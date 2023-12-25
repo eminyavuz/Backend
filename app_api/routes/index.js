@@ -1,7 +1,7 @@
-var express=require("express");
-var router=express.Router();
-var ctrlVenues=require("../controllers/VenueController");
-var ctrlComments=require("../controllers/CommentController");
+var express = require('express');
+var router = express.Router();
+var ctrlVenues = require("../controllers/VenueController");
+var ctrlComments = require("../controllers/CommentController");
 
 router
 .route("/venues")
@@ -20,8 +20,8 @@ router
 
 router
 .route("/venues/:venueid/comments/:commentid")
-.get(ctrlComments.getComment)
-.put(ctrlComments.updateComment)
-.delete(ctrlComments.deleteComment)
+.get(ctrlComments.getComments)
+.put(ctrlComments.updateComments)
+.delete(ctrlComments.deleteComments);
 
-module.exports=router;  
+module.exports = router;
