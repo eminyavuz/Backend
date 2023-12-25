@@ -2,11 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "./app.js",
+      "src": "./api/venueController.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "./api/commentController.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "./api/venueController.js",
+      "dest": "/api/VenueController.js"
+    },
+    {
+      "src": "/api/CommentController",
+      "dest": "/api/CommentController.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/app.js"
